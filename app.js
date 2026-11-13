@@ -9,7 +9,7 @@ const chart=$("speedChart"),chartEmpty=$("chartEmpty");
 let controller=null,chartPoints=[],toastTimer=null,isRunning=false;
 function median(values){const s=values.slice().sort(function(a,b){return a-b});const m=Math.floor(s.length/2);return s.length%2?s[m]:(s[m-1]+s[m])/2}
 function fmt(value,digits){return Number.isFinite(value)?value.toFixed(digits===undefined?1:digits):"—"}
-function setProgress(value){progressBar.style.width=Math.max(0,Math.min(100,value))+"%"}
+function setProgress(value){const amount=Math.max(0,Math.min(100,value));progressBar.style.width=amount+"%";progressBar.parentElement.setAttribute("aria-valuenow",String(Math.round(amount)))}
 function setPhase(name,caption){phaseBadge.textContent=name.toUpperCase();liveCaption.textContent=caption;engineStatus.textContent=isRunning?"TEST IN PROGRESS":"READY TO TEST"}
 function setLive(value,kind){liveSpeed.textContent=fmt(value,1);gaugeArc.style.strokeDashoffset=String(100-Math.max(0,Math.min(100,value)));gaugeArc.style.stroke=kind==="upload"?"var(--amber)":"var(--mint)"}
 function toast(message){const node=$("toast");node.textContent=message;node.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(function(){node.classList.remove("show")},3400)}
