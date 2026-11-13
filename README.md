@@ -1,4 +1,6 @@
 NetMeter
+
+<p align="center"><img src="assets/readme-banner.svg" alt="Animated NetMeter network graph banner" width="100%"></p>
 ========
 
 A lightweight, browser-based internet speed and connection diagnostics tool.
