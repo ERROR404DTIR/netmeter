@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#0c1419">
 <meta name="description" content="NetMeter is a lightweight browser-based internet speed and connection diagnostics tool.">
 <title>NetMeter — Internet, measured clearly.</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -40,10 +41,10 @@
       <div class="test-actions">
         <button class="primary-btn" id="startBtn" type="button"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 5 10 7-10 7V5Z" fill="currentColor"/></svg>Start speed test</button>
         <button class="stop-btn" id="stopBtn" type="button" hidden>Stop test</button>
-        <p class="test-hint" id="testHint">A full run sends a small amount of test traffic to Cloudflare's edge network.</p>
+        <p class="test-hint" id="testHint">A full run transfers about 24 MB of test data to Cloudflare's edge network.</p>
       </div>
     </div>
-    <div class="progress" aria-label="Test progress"><span id="progressBar"></span></div>
+    <div class="progress" role="progressbar" aria-label="Test progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progressBar"></span></div>
     <div class="metric-grid">
       <div class="metric"><div class="metric-name">Latency</div><div class="metric-value" id="latencyValue">— <span class="metric-unit">ms</span></div></div>
       <div class="metric"><div class="metric-name">Jitter</div><div class="metric-value" id="jitterValue">— <span class="metric-unit">ms</span></div></div>
