@@ -22,7 +22,7 @@ Measurement notes
 -----------------
 NetMeter is a browser-side estimate, not an ICMP ping tool or a laboratory-grade measurement. Latency is an HTTP round-trip to Cloudflare's public speed endpoint; download and upload results depend on the route to the selected Cloudflare edge, browser scheduling, Wi-Fi, VPN, and other traffic. Upload testing may be blocked by some networks or browsers.
 
-Test traffic is sent to speed.cloudflare.com using its public download and upload endpoints. NetMeter does not operate a measurement server. Recent result history is stored locally in the browser.
+Each full run transfers about 24 MB to speed.cloudflare.com using its public download and upload endpoints. NetMeter does not operate a measurement server. Recent result history is stored locally in the browser.
 
 NetMeter is an independent project and is not affiliated with Cloudflare, Ookla, or Speedtest.net.
 
